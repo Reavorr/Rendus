@@ -19,7 +19,7 @@ Concernant les vecteurs d'initialisation (IV), leur réutilisation peut introdui
 ![Message déchiffré](https://cdn.discordapp.com/attachments/1160870725842898969/1173899783463776267/image.png?ex=6565a25e&is=65532d5e&hm=3de572f439945388f31efad5e25978f0dba2db8a626fb3675194d5a3adc140d8&)
 
 ## 4. Comment pourrait-on s'assurer de l'intégrité du message ? Ajouter cette fonctionnalité à l'aide d'un script ou d'un outil en CLI.
-
-## 5. Comment pourrait-on s'assurer de l'authenticité de ce message ? Ajouter cette fonctionnalité à l'aide d'un script ou d'un outil en CLI.
-
-## 6. Reproduire l'étape 0 avec un algorithme de chiffrement symétrique "post quantique"
+Voici quelques méthodes couramment utilisées pour assurer l'intégrité d'un message :
+- Hachage (Hashing) : Utiliser une fonction de hachage comme SHA-256 pour créer une empreinte (hash) du message. Le destinataire peut recalculer la valeur de hachage à partir du message reçu et vérifier si elle correspond à l'empreinte envoyée. Si les empreintes correspondent, le message est intact.
+- Signature numérique : Utiliser une signature numérique qui combine une clé privée pour signer le message et une clé publique pour vérifier la signature. Si la signature est valide, cela garantit que le message n'a pas été modifié par des tiers et qu'il provient du titulaire de la clé privée.
+- Cryptographie asymétrique : Utiliser un système de cryptographie asymétrique avec une paire de clés (publique et privée). Le message est chiffré avec la clé publique du destinataire et ne peut être déchiffré qu'avec sa clé privée, assurant ainsi que seul le destinataire légitime peut lire le message.
